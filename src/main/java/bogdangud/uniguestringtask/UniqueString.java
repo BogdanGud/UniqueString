@@ -17,7 +17,7 @@ public class UniqueString {
         int startPosition = 0;
 
         for (int i = 0; i < inputChar.length; i++) {
-            if (substring.length() >= strLenght) {
+            if (substring.length() == strLenght) {
                 return substring;
             }
             if (substring.indexOf(inputChar[i]) == -1) {
@@ -29,6 +29,8 @@ public class UniqueString {
                 substringNew = "";
             }
         }
+        if (substring.length() != strLenght)
+            substring = "";
         return substring;
     }
 
